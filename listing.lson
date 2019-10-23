@@ -1,0 +1,58 @@
+{
+	{ -- Raisin 2.0
+        source = "https://raw.githubusercontent.com/hugeblank/raisin/3d53a102cd8dcd29c05c25ad2b0cb4bd7e98e2d0/raisin.lua",
+        path = "raisin.lua",
+        versions = {
+            "> 0.7.1",
+        }
+    },
+    { -- Raisin 1.0
+        source = "https://raw.githubusercontent.com/hugeblank/raisin/44a2a37e7560e55275308d4ecf3f3a9e7fe57da4/raisin.lua",
+        path = "raisin.lua",
+        versions = {
+            ">= 0.2.0 && <= 0.7.1",
+        }
+    },
+    {
+        source = "https://raw.githubusercontent.com/hugeblank/qs-cc/377de7135a291a9a3b79e01034432389295f45b9/src/allium/color.lua",
+        path = "color.lua",
+        versions = {
+            ">= 0.0.0",
+        }
+    },
+    {
+        source = "https://raw.githubusercontent.com/rxi/json.lua/69b714ad2b7a848a16e1efb06496e02953cf1507/json.lua",
+        path = "json.lua",
+        versions = {
+            ">= 0.6.0",
+        }
+    },
+    {
+        source = "https://raw.githubusercontent.com/hugeblank/qs-cc/377de7135a291a9a3b79e01034432389295f45b9/src/allium/mojson.lua",
+        path = "mojson.lua",
+        versions = {
+            "> 0.6.0",
+        }
+    },
+    {
+        source = "https://raw.githubusercontent.com/hugeblank/semparse/38514587bde9aa9d64d433088f640a23ceb9b33c/semver.lua",
+        path = "semver.lua",
+        versions = {
+            ">= 0.6.0",
+        }
+    },
+    {
+        source = "https://raw.githubusercontent.com/hugeblank/qs-cc/377de7135a291a9a3b79e01034432389295f45b9/src/nap.lua",
+        path = "nap.lua",
+        versions = {
+            ">= 0.6.0",
+        }
+    },
+    {
+        source = "https://raw.githubusercontent.com/hugeblank/qs-cc/377de7135a291a9a3b79e01034432389295f45b9/src/gget.lua",
+        path = "gget.lua",
+        versions = {
+            ">= 0.6.0",
+        }
+    },
+}
