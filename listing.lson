@@ -42,7 +42,7 @@
         }
     },
     {
-        source = "https://raw.githubusercontent.com/hugeblank/qs-cc/377de7135a291a9a3b79e01034432389295f45b9/src/nap.lua",
+        source = "https://raw.githubusercontent.com/hugeblank/qs-cc/87f7c33b5e2df97c47fda330f5a3bb3ccf0ef4b2/src/nap.lua",
         path = "nap.lua",
         versions = {
             ">= 0.6.0",
