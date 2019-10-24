@@ -14,7 +14,7 @@
         }
     },
     {
-        source = "https://raw.githubusercontent.com/hugeblank/qs-cc/937236d45f9fd75f06b83d8edd0e573b13c075ca/src/allium/color.lua",
+        source = "https://raw.githubusercontent.com/hugeblank/qs-cc/415cf08d1ead407bc91af88660ca6f77c5313596/src/allium/color.lua",
         path = "color.lua",
         versions = {
             ">= 0.0.0",
