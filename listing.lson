@@ -1,6 +1,6 @@
 {
 	{ -- Raisin 2.0
-        source = "https://raw.githubusercontent.com/hugeblank/raisin/3d53a102cd8dcd29c05c25ad2b0cb4bd7e98e2d0/raisin.lua",
+        source = "https://raw.githubusercontent.com/hugeblank/raisin/1078be73c99f41ae706ce171814208dea608a3c5/raisin.lua",
         path = "raisin.lua",
         versions = {
             "> 0.7.1",
@@ -42,7 +42,7 @@
         }
     },
     {
-        source = "https://raw.githubusercontent.com/hugeblank/semparse/38514587bde9aa9d64d433088f640a23ceb9b33c/semver.lua",
+        source = "https://raw.githubusercontent.com/hugeblank/semparse/1078be73c99f41ae706ce171814208dea608a3c5/semver.lua",
         path = "semver.lua",
         versions = {
             ">= 0.6.0",
