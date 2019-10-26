@@ -13,11 +13,18 @@
             ">= 0.2.0 && <= 0.7.1",
         }
     },
-    {
+    { -- color.lua 1.0
         source = "https://raw.githubusercontent.com/hugeblank/qs-cc/415cf08d1ead407bc91af88660ca6f77c5313596/src/allium/color.lua",
         path = "color.lua",
         versions = {
             ">= 0.0.0",
+        }
+    },
+    { -- color.lua 2.0
+        source = "https://raw.githubusercontent.com/hugeblank/qs-cc/bd6c026bbfd0154901cc2562c351eb0064c0eba9/src/allium/color.lua",
+        path = "color.lua",
+        versions = {
+            ">= 0.9.0-pr.newcolor",
         }
     },
     {
