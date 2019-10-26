@@ -4,13 +4,13 @@
     Please do not modify this comment block, but do credit yourself and any other
     contributors in the block below.
 ]]
-   
+
 --[[ Depman Instance Information
     Maintained by: hugeblank
     Modified for: Allium
 ]]
- 
- 
+
+
 --## Argument Evaluation ##--
 local args = {...}
 if #args < 6 then
@@ -18,7 +18,7 @@ if #args < 6 then
     return
 end
 local request, dir, url, path, lib_path, version = table.unpack(args)
- 
+
 --## Dependency Loading ##--
 if not fs.exists(dir.."lib/semver.lua") then
     local req, file = http.get("https://raw.github.com/hugeblank/semparse/master/semver.lua"), fs.open(dir.."lib/semver.lua", "w")
@@ -27,7 +27,7 @@ if not fs.exists(dir.."lib/semver.lua") then
     file.close()
 end
 local semver = dofile(dir.."/lib/semver.lua")
- 
+
 --## Local Function Definitions ##--
 local pullTable
 do -- Block to keep cache value private
@@ -48,7 +48,7 @@ do -- Block to keep cache value private
         return out -- Return it all. nuff said.
     end
 end
- 
+
 local function getTable() -- Provides the internal dependency listing
     if not fs.exists(path) then -- If the listing file doesn't exist, return a blank table
         return {}
@@ -62,7 +62,7 @@ local function getTable() -- Provides the internal dependency listing
         return out -- return the table of currently installed deps
     end
 end
- 
+
 local function applyData(name, meta) -- Set data within the local dependency listing
     local data = getTable() -- Get currently installed deps
     data[name] = meta -- Add the new index
@@ -74,7 +74,7 @@ local function applyData(name, meta) -- Set data within the local dependency lis
     file.close() -- Close
     return true -- Mission accomplished
 end
- 
+
 local function checkVersions(versions) -- Check versions within a range, comparison, or explicit list
     local function convert(str) -- Use the semver API to convert. Provide a detailled error if conversion fails
         if type(str) ~= "string" then
@@ -119,13 +119,12 @@ local function checkVersions(versions) -- Check versions within a range, compari
     end
     return false
 end
- 
+
 local function filterDeps() -- Filter dependencies that have matching versions and need updating
     local data, cur_data = pullTable(), getTable() -- Get the online query table, and current listing table
     local out = {}
     for i = 1, #data do -- For each dependency in the table
         local name = data[i].path -- Set a special variable for the path
-        --print(textutils.serialise(data[i]))
         local valid = checkVersions(data[i].versions)
         if valid then -- If the version supported matches the inputted one
             if cur_data[name] then -- and this dep exists internally
@@ -149,21 +148,21 @@ local function filterDeps() -- Filter dependencies that have matching versions a
     end
     return out -- Fin.
 end
- 
+
 --## Task Definitions ##--
 local tasks = {} -- Write tasks below this point
- 
+
 tasks.update = function() -- The generic update task, made for you
     local depmeta = filterDeps() -- Get all dependencies to be updated
     for name, meta in pairs(depmeta) do -- For each dependency
         if not http.checkURL(meta.source) then -- Check that the source is valid
-            printError("Could not locate dependency "..name or "") -- Mention it couldn't be found then move on
+            printError("Could not locate dependency "..(name or "")) -- Mention it couldn't be found then move on
         end
         local contents, file = http.get(meta.source), fs.open(fs.combine(lib_path, name), "w")
         print("Updating "..name)
         -- Download the library, and open the file to dump it in
         if not file then -- If it couldn't be opened
-            error("Could not write dependency "..name or "") -- Crash and burn
+            error("Could not write dependency "..(name or "")) -- Crash and burn
         end
         file.write(contents.readAll()) -- Write the library to the file
         file.close() -- Close file, as you always should
@@ -171,7 +170,7 @@ tasks.update = function() -- The generic update task, made for you
     end
     return true -- Job done.
 end
- 
+
 tasks.clean = function() -- Clean up dependencies that are no longer used
     local depmeta, listing = pullTable(), getTable() -- Get dependency listing online, and internally
     local delet = {}
@@ -189,11 +188,20 @@ tasks.clean = function() -- Clean up dependencies that are no longer used
         end
     end
 end
- 
+
+tasks.scan = function()
+    local depmeta = filterDeps()
+    local out = {}
+    for name in pairs(depmeta) do
+        out[#out+1] = name
+    end
+    print(textutils.serialise(out)) -- Write the library to the file
+end
+
 tasks.upgrade = function()
     tasks.update()
 end
- 
+
 local action = tasks[request] -- Set action to the index within the task list corresponding to a task
 if action then -- If it's actually a task
     action() -- Fulfill it
