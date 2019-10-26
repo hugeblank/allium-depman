@@ -42,7 +42,7 @@
         }
     },
     {
-        source = "https://raw.githubusercontent.com/hugeblank/semparse/1078be73c99f41ae706ce171814208dea608a3c5/semver.lua",
+        source = "https://raw.githubusercontent.com/hugeblank/semparse/07d4a49ef205f02defe28da45d14c7132ecd879b/semver.lua",
         path = "semver.lua",
         versions = {
             ">= 0.6.0",
