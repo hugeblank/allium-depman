@@ -1,6 +1,6 @@
 {
 	{ -- Raisin 2.0
-        source = "https://raw.githubusercontent.com/hugeblank/raisin/1078be73c99f41ae706ce171814208dea608a3c5/raisin.lua",
+        source = "https://raw.githubusercontent.com/hugeblank/raisin/2d63831137790b320a1621a859aeb73f552cabeb/raisin.lua",
         path = "raisin.lua",
         versions = {
             "> 0.7.1",
