@@ -21,7 +21,7 @@
         }
     },
     { -- color.lua 2.0
-        source = "https://raw.githubusercontent.com/hugeblank/qs-cc/bd6c026bbfd0154901cc2562c351eb0064c0eba9/src/allium/color.lua",
+        source = "https://raw.githubusercontent.com/hugeblank/qs-cc/aaf5dee7f5f7ef34861ec6830e5e2e131f1cf53a/src/allium/color.lua",
         path = "color.lua",
         versions = {
             ">= 0.9.0-pr.newcolor",
