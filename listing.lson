@@ -1,6 +1,6 @@
 {
-	{ -- Raisin 2.0
-        source = "https://raw.githubusercontent.com/hugeblank/raisin/2d63831137790b320a1621a859aeb73f552cabeb/raisin.lua",
+    { -- Raisin 2.0
+        source = "https://raw.githubusercontent.com/hugeblank/raisin/796f102cd2c083d432c014f22d2b04d1d4960f23/raisin.lua",
         path = "raisin.lua",
         versions = {
             "> 0.7.1",
@@ -13,18 +13,18 @@
             ">= 0.2.0 && <= 0.7.1",
         }
     },
-    { -- color.lua 1.0
-        source = "https://raw.githubusercontent.com/hugeblank/qs-cc/415cf08d1ead407bc91af88660ca6f77c5313596/src/allium/color.lua",
-        path = "color.lua",
-        versions = {
-            ">= 0.0.0 && <= 0.9.0-pr",
-        }
-    },
     { -- color.lua 2.0
         source = "https://raw.githubusercontent.com/hugeblank/qs-cc/aaf5dee7f5f7ef34861ec6830e5e2e131f1cf53a/src/allium/color.lua",
         path = "color.lua",
         versions = {
             ">= 0.9.0-pr.newcolor",
+        }
+    },
+    { -- color.lua 1.0
+        source = "https://raw.githubusercontent.com/hugeblank/qs-cc/415cf08d1ead407bc91af88660ca6f77c5313596/src/allium/color.lua",
+        path = "color.lua",
+        versions = {
+            ">= 0.0.0 && <= 0.9.0-pr",
         }
     },
     {
