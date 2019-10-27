@@ -165,7 +165,7 @@ tasks.update = function() -- The generic update task, made for you
             error("Could not write dependency "..(name or "")) -- Crash and burn
         end
         file.write(contents.readAll()) -- Write the library to the file
-        file.close() -- Close file, as you always should
+        file.close() contents.close() -- Close handles, as you always should
         applyData(name, meta.source) -- Apply relevant data to the dependency listing file
     end
     return true -- Job done.
