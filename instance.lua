@@ -193,9 +193,8 @@ tasks.scan = function()
     local depmeta = filterDeps()
     local out = {}
     for name in pairs(depmeta) do
-        out[#out+1] = name
+        print(name)
     end
-    print(textutils.serialise(out)) -- Write the library to the file
 end
 
 tasks.upgrade = function()
