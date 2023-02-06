@@ -31,7 +31,7 @@
         source = "https://raw.githubusercontent.com/rxi/json.lua/69b714ad2b7a848a16e1efb06496e02953cf1507/json.lua",
         path = "json.lua",
         versions = {
-            ">= 0.6.0",
+            ">= 0.6.0 && <= 0.10.0",
         }
     },
     {
@@ -59,7 +59,14 @@
         source = "https://raw.githubusercontent.com/hugeblank/qs-cc/377de7135a291a9a3b79e01034432389295f45b9/src/gget.lua",
         path = "gget.lua",
         versions = {
-            ">= 0.6.0",
+            ">= 0.6.0 && <= 0.10.0",
+        }
+    },
+    {
+        source = "https://raw.githubusercontent.com/hugeblank/qs-cc/a3198f856a9666c53ab87856b6655f3c5dccecbc/src/gget.lua",
+        path = "gget.lua",
+        versions = {
+            "> 0.10.0",
         }
     },
 }
